@@ -13,7 +13,7 @@ if QUANDL_API_KEY == 'REPLACE-THIS-TEXT-WITH-A-REAL-API-KEY':
  raise Exception("Please provide a valid Quandl API key!")
 # Set the start and end date
 start_date = '1990-01-01'
-end_date = '2020-03-01'
+end_date = '2018-03-01'
 # Set the ticker name
 ticker = 'INFO'#IHS MARKIT
 # Feth the data
