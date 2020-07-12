@@ -1,6 +1,10 @@
 
-https://nsetools.readthedocs.io/en/latest/usage.html#advances-declines
+python -v
+Python 3.7.6
 
+https://nsetools.readthedocs.io/en/latest/usage.html#advances-declines
+pip install nsetools
+pip install nsetools --upgrade
 Technical Analysis libary
 
 https://technical-analysis-library-in-python.readthedocs.io/en/latest/ta.html#momentum-indicators
@@ -10,3 +14,20 @@ towards DataScience
 https://towardsdatascience.com/stock-analysis-in-python-a0054e2c1a4c
 
 https://financetrain.com/best-python-librariespackages-finance-financial-data-scientists/
+
+https://kevinpmooney.blogspot.com/2017/07/calculating-implied-volatility-from.html
+https://kevinpmooney.blogspot.com/2017/07/calculating-implied-volatility-from.html
+
+https://www.learndatasci.com/best-data-science-online-courses/
+
+
+Tutorial for PrettyTable
+http://zetcode.com/python/prettytable/
+
+Courses list by iitD
+http://web.iitd.ac.in/~dharmar/courses.html
+#ML in validataion in ML Trading Model
+https://blog.quantinsti.com/cross-validation-machine-learning-trading-models/
+
+
+https://www.google.com/search?q=Mathematical+Finance+notes&rlz=1C1CHBD_enIN881IN881&oq=Mathematical+Finance+notes&aqs=chrome..69i57j35i39j0l3j69i60l3.2230j0j7&sourceid=chrome&ie=UTF-8
