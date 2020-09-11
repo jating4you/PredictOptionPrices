@@ -13,7 +13,7 @@ if QUANDL_API_KEY == 'REPLACE-THIS-TEXT-WITH-A-REAL-API-KEY':
  raise Exception("Please provide a valid Quandl API key!")
 # Set the start and end date
 start_date = '1990-01-01'
-end_date = '2020-07-01'
+end_date = '2020-03-01'
 # Set the ticker name
 ticker = 'INFO'#IHS MARKIT
 # Feth the data
@@ -32,7 +32,7 @@ T = 1.0
 t_intervals = 250
 delta_t = T / t_intervals
 
-iterations = 1000000
+iterations = 10000
 
 Z = np.random.standard_normal((t_intervals + 1, iterations))
 S = np.zeros_like(Z)
