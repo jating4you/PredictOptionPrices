@@ -9,7 +9,7 @@ import yfinance as yf
 
 msft = yf.Ticker("RELIANCE.NS")
 
-data=msft.history(period="3mo")
+data=msft.history(period="9mo")
 print(data.columns.values) #['Open' 'High' 'Low' 'Close' 'Volume' 'Dividends' 'Stock Splits']
 #print(data.describe())
 filterdata=data[['Close']]

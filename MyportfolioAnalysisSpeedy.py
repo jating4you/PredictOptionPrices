@@ -1,3 +1,4 @@
+#! shebang line
 from nsetools import Nse
 from pprint import pprint
 import csv
@@ -10,13 +11,9 @@ from datetime import datetime
 from prettytable import PrettyTable
 import collections
 
-
-
-
 nse = Nse()
 print(nse)
-
-filename = "holdings04072020.csv"
+filename = "data/holdings09092020.csv"
 fields = []
 rows = []
 with open(filename, 'r') as csvfile:
@@ -29,7 +26,7 @@ with open(filename, 'r') as csvfile:
     # extracting each data row one by one
     for row in csvreader:
         rows.append(row)
-
+    print(rows)
     # get total number of rows
     print("Total no. of Holding: %d" % (csvreader.line_num-1))
 
@@ -61,11 +58,11 @@ def transform(row):
         PL=(float(nseStock["lastPrice"])-avgPrice)*quantity
         PL_per=(float(nseStock["lastPrice"])-avgPrice)/avgPrice *100
         exDate=nseStock["exDate"]
-        if str(exDate!='None'):
-            exDate=str("24-SEP-01")
+#       if str(exDate=='None'):
+#            exDate=str("24-SEP-01")
         return [stockName, int(quantity), avgPrice, nseStock["lastPrice"], "%.2f" % currVal, "%.2f" % PL,
                     "%.2f" % PL_per, "%.2f" % float(nseStock["pChange"]), nseStock["dayHigh"],
-                    nseStock["pricebandupper"],nseStock["pricebandlower"], nseStock["deliveryQuantity"],nseStock["totalTradedVolume"],nseStock["varMargin"], nseStock["high52"], nseStock["low52"], nseStock["purpose"],
+                    nseStock["pricebandupper"],nseStock["pricebandlower"], nseStock["deliveryQuantity"],nseStock["totalTradedVolume"],nseStock["varMargin"], nseStock["high52"], nseStock["low52"], stockName +nseStock["purpose"],
                     exDate]
 
     else:
@@ -88,3 +85,36 @@ print(Ntable)
 
 nseStock = nse.get_quote("TRIDENT")
 print(nseStock)
+#nse.get_bhavcopy_filename()
+
+class Holding:
+    filename = "data/holdings09092020.csv"
+    fields = []
+    rows = []
+    def loadHolding(self):
+        print('Loading Holding..')
+        with open(filename, 'r') as csvfile:
+            # creating a csv reader object
+            csvreader = csv.reader(csvfile)
+
+            # extracting field names through first row
+            fields = next(csvreader)
+
+            # extracting each data row one by one
+            for row in csvreader:
+                rows.append(row)
+            print(rows)
+            # get total number of rows
+            print("Total no. of Holding: %d" % (csvreader.line_num - 1))
+
+def main():
+    holding = Holding()
+    holding.loadHolding()
+
+
+
+
+#how to upgrade all package in python
+#https://www.activestate.com/resources/quick-reads/how-to-update-all-python-packages/
+#pip install -r requirements.txt --upgrade
+#https://www1.nseindia.com/ArchieveSearch?h_filetype=eqbhav&date=28-08-2020&section=EQ

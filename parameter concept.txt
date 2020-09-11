@@ -1,0 +1,11 @@
+
+ Var: value at risk-> how much portfolio can go up / down as per historical data analysis.
+
+ ELM: extream loss margin is an additional calculated risk that can arise beyound the VaR based on historical data analysis.
+
+ MTM: mark to market= sell-buy price
+
+ SPAN Margin: the intial margin  required for the positions is computed using a software call SPAN(Standard Portfoli analysis of risk) and hence is also referred as SPAN margin.
+ cover risk for 99% days.
+
+ Exposure Margin: an aditional margin over and above the span margin is collected which is know as  the exposure margin.
