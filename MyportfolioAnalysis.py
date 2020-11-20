@@ -1,4 +1,4 @@
-from nsetools import Nse
+from nset1ools import Nse
 from pprint import pprint
 import csv
 import pandas as pd
